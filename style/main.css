@@ -1,0 +1,404 @@
+/*******START MOBILE*************/
+/********Header******/
+*{
+    box-sizing: border-box;
+}
+aside, div, section, header, footer, nav {
+    display: block;
+}
+html, body, #wrapper{
+    margin: 0;
+    padding: 0;
+}
+aside, div, section, header, footer, nav, html, body, p, h1, h2, h3, div {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 auto;
+}
+
+/*navigation*/
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header li {
+    float: left;
+}
+
+header li + li{
+    border-left: 1px solid #fff;
+}
+header li:last-child{
+    border-right: 1px solid #fff;
+}
+
+header a {
+    display: block;
+    width: 100px;
+    line-height: 60px;
+    color:#fff;
+    height: 60px;
+    background-color: #525A93;
+    text-align:center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header a:hover{
+    background-color:#A4ACE4;
+}
+
+#nav-desktop{
+    display: block;
+}
+/*on enlève le float sur les liens du menu et on applique une largeur de 100% */
+header li {
+    float: none;
+    width: 100%;
+}
+
+/*on enlève la bordure gauche et on applique une bordure sur tous les côtés*/
+header li{
+    border-left: 0px solid #fff!important;
+    border: 1px solid #fff!important;
+}
+/*on applique sur les liens une largeur de 100% */
+header a {
+    width: 100%;
+}
+
+/*titres*/
+h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: .2em;
+}
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+p {
+    margin-bottom: 1em;
+}
+section{
+    padding: 30px 1.5%;
+    text-align: center;
+}
+article{
+    padding: 1.5%;
+    display: inline-block;
+    width:100%;
+    background-color:#ececec;
+    margin:1% 0 1%;
+}
+
+article p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+/*on rend les images de la section responsive*/
+section img{
+    max-width: 100%;
+}
+/********Footer********/
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+footer li {
+    float: none;
+    width: 100%;
+}
+
+footer a {
+    width: 100%;
+}
+
+.icons{
+    display:flex;
+}
+
+#bloc-nav-footer{
+    display: flex;
+}
+
+.contact{
+    visibility: collapse;
+}
+
+.menu-footer{
+    width: 50%;
+}
+
+.icons a img{
+    width: 70px;
+}
+
+
+
+/*****************************************/
+/*********START DESKTOP***************/
+/****************************************/
+
+
+@media only screen and (min-width:992px) {
+
+    body {
+        margin: 0;
+        font-family: Arial, Vernada, sans-serif;
+    }
+
+    html {
+        font-family: 'Asap', sans-serif;
+    }
+
+    /*!* CARROUSEL *!*/
+    /*!* On style le carousel *!*/
+    /*!* 1. LABEL en form de cercle *!*/
+    /*#boutons label*/
+    /*{*/
+    /*width:10px;*/
+    /*height:10px;*/
+    /*background-color:red;*/
+    /*display: inline-block; !* Ce sont des element inline, donc ils prennent par defauts la largeur de leurs contenu, s'ils n'ont pas de contenu, il n' y a rien. On doit donc les convertir en inline-block si on veut les "voir". car on veut aussi les aligner *!*/
+    /*border-radius : 5px;*/
+    /*}*/
+    /*!* 2. On centre les labels *!*/
+    /*#boutons*/
+    /*{*/
+    /*text-align : center;*/
+    /*}*/
+    /*!* 3. On cache les input de type radio *!*/
+    /*#carousel input*/
+    /*{*/
+    /*display : none;*/
+    /*}*/
+    /*!* 4. On aligne les diapositives *!*/
+    /*.photo*/
+    /*{*/
+    /*float : left; !* On aligne les diapositives *!*/
+    /*width : 20%; !* Chaque diapositif occupe 1/5 du parent .inner *!*/
+    /*position:relative;*/
+    /*}*/
+    /*.photo img*/
+    /*{*/
+    /*width: 100%; !* On rend les images responsives *!*/
+    /*}*/
+    /*!* 5. on definit la largeur de .inner *!*/
+    /*.inner*/
+    /*{*/
+    /*width : 300%; !* 5*100% car on a 5 diapositives. si c'etait 3 diapositives, on mettrait 300% *!*/
+    /*}*/
+    /*!* 6. On cache le contenu qui debord *!*/
+    /*#overflow*/
+    /*{*/
+    /*overflow: hidden;*/
+    /*}*/
+    /*!* 7. On style les textes des bannieres *!*/
+    /*.photo h3*/
+    /*{*/
+    /*color:yellow;*/
+    /*position:absolute;*/
+    /*top :20px;*/
+    /*left : 20px;*/
+    /*}*/
+    /*!* 1. FONCTIONNEMENT DU CAROUSEL *!*/
+    /*!* quand je clique sur le premier label, il est aaoscie a l'input slide1, la div .inner qui est apres l'input, se place a une marge gauche de 0, donc on voit la 1ere diapositive *!*/
+    /*#slide1:checked~ #slides .inner*/
+    /*{*/
+    /*margin-left:0;*/
+    /*}*/
+    /*!* quand je clique sur le 2ieme label, il est associe a l'input slide2, la div .inner qui est apres l'input, se place a une marge gauche de -100, donc on voit la 2ieme diapositive *!*/
+    /*#slide2:checked~ #slides .inner*/
+    /*{*/
+    /*margin-left:-100%;*/
+    /*}*/
+    /*!* quand je clique sur le 3ieme label, il est associe a l'input slide3, la div .inner qui est apres l'input, se place a une marge gauche de -200, donc on voit la 3ieme diapositive *!*/
+    /*#slide3:checked~ #slides .inner*/
+    /*{*/
+    /*margin-left:-200%;*/
+    /*}*/
+    /*!* quand je clique sur le 4ieme label, il est associe a l'input slide4, la div .inner qui est apres l'input, se place a une marge gauche de -300, donc on voit la 4ieme diapositive *!*/
+    /*#slide4:checked~ #slides .inner*/
+    /*{*/
+    /*margin-left:-300%;*/
+    /*}*/
+    /*!* quand je clique sur le 5ieme label, il est associe a l'input slide5, la div .inner qui est apres l'input, se place a une marge gauche de -400, donc on voit la 5ieme diapositive *!*/
+    /*#slide5:checked~ #slides .inner*/
+    /*{*/
+    /*margin-left:-400%;*/
+    /*}*/
+    /*!* 2. On applique une transformation sur .inner pour que les images defilent lorsqu'elles passent d'un etat initial (par exemple: margin-left:0) a un etat final (par exemple: margin-left:-200px;)  *!*/
+    /*.inner*/
+    /*{*/
+    /*transition : all 1s ease-in-out;*/
+    /*}*/
+    /*!* END CARROUSEL *!*/
+    header, footer {
+        background-color: beige;
+        background: -webkit-gradient(linear, left top, left bottom, from(#000), to(beige));
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        padding: 10px;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    h1:hover {
+        text-transform: uppercase;
+        color: #30C0FF;
+    }
+
+    /* HEADER STYLE */
+    .my_header_container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Style du logo */
+    /* end style du logo */
+    #logo {
+        flex: 1;
+    }
+
+    .log {
+        width: 80px;
+        height: 80px;
+        padding: 4px;
+    }
+
+    /* style du nav */
+    .menu-header {
+        flex: 3;
+    }
+
+    .menu-header ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-header ul li {
+        /* background-color : red; */
+        margin: 2px;
+        width: 15%;
+        display: inline-block;
+        line-height: 80px;
+    }
+
+    .menu-header ul li a {
+        display: block;
+        text-decoration: none;
+        color: yellowgreen;
+    }
+
+    .menu-header ul li a:hover {
+        color: #30C0FF;
+        text-decoration: underline;
+    }
+
+    /* end style du nav */
+    header #logo, header .menu-header {
+        /* border : 1px solid black; */
+        /* margin : 5px; */
+    }
+
+    /* END HEADER STYLE */
+    /* FOOTER STYLE */
+    footer {
+        display: flex;
+        color: #fff;
+    }
+
+    footer div {
+        /* border : 1px solid red; */
+        width: 33.3%;
+    }
+
+    .bloc-nav-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > #bloc-nav-footer > .menu-footer {
+        width: 100%;
+        /* border : 1px solid green; */
+    }
+
+    footer > #bloc-nav-footer > .menu-footer > nav > ul > li {
+        width: 27.5%;
+        display: inline-block;
+        margin: 10px 5px;
+    }
+
+    footer > #bloc-nav-footer > .menu-footer > nav > ul > li > a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer > #bloc-nav-footer > .menu-footer > nav > ul > li > a:hover {
+        color: #30C0FF;
+        text-decoration: underline;
+    }
+
+    .menu-footer {
+        flex: 1;
+    }
+
+    .menu-footer ul {
+        list-style: none;
+    }
+
+    .icons {
+        flex: 2;
+    }
+
+    .icons > a > img {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact {
+        flex: 1;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: initial;
+    }
+
+
+}
