@@ -195,12 +195,7 @@ section img {
     width: 235px;
     position: absolute;
     background: rgba(255, 0, 0, 0.8);
-    /* background : -webkit-gradient(
-        linear,
-        left top, left bottom,
-        from(#000),
-        to(#595959)
-    ); */
+
     font-weight: bold;
     color: #fff;
 }
@@ -346,6 +341,11 @@ body {
     color: white;
 }
 
+footer {
+    background-color: beige;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(beige));
+}
+
 /**********************************************/
 /*********START TABLETTE**********************/
 /***********************************************/
@@ -357,6 +357,7 @@ body {
         width: 80%;
     }
 
+    /******INDEX*****/
     .col-3 > .img-index-tab {
         float: left;
         margin-left: 2%;
@@ -366,6 +367,68 @@ body {
         padding-top: 5%;
         width: 610px;
         height: 100px;
+    }
+
+    /******* END INDEX*******/
+    /*********CATALOGUE************/
+    .col-4 {
+        width: 50%;
+        float: left;
+    }
+
+    #fdetail {
+        clear: both;
+        background-color: rgba(0, 13, 81, 0.82);
+    }
+
+    #idMenufooter {
+        margin-left: 2%;
+    }
+
+    /*******END CATALOGUE***********/
+    /*********DETAILS************/
+    #id_detailsdescription {
+        background-color: #8e7efd;
+    }
+
+    #mddescription2, #mdequipement {
+        background-color: rgba(205, 172, 40, 0.88);
+    }
+
+    #mddescription2 {
+        float: left;
+        width: 40%;
+        margin-left: 8%;
+    }
+
+    #mdfichetechnique {
+        display: inline-block;
+        width: 40%;
+        margin-left: 5%;
+    }
+
+    #mdequipement {
+        display: inline-block;
+        width: 40%;
+        margin-left: 8%;
+    }
+
+    #mdaccessoires {
+        display: inline-block;
+        width: 40%;
+        margin-left: 5%;
+    }
+
+    /******* END DETAILS*******/
+    /**********CONTACT*********/
+    #formulaire {
+        background-color: white;
+    }
+
+    /******END CONTACT***********/
+    footer {
+        background-color: beige;
+        background: -webkit-gradient(linear, left top, left bottom, from(#000), to(beige));
     }
 
 }
@@ -614,9 +677,7 @@ body {
         line-height: 20px;
     }
 
-    /*.tooltip:hover, .masquer p:hover {*/
-    /*z-index: 21;*/
-    /*}*/
+
     .tooltip:hover p {
         width: 100%;
         display: block;
@@ -640,12 +701,7 @@ body {
         width: 235px;
         position: absolute;
         background: rgba(255, 0, 0, 0.8);
-        /* background : -webkit-gradient(
-            linear,
-            left top, left bottom,
-            from(#000),
-            to(#595959)
-        ); */
+     /
         font-weight: bold;
         color: #fff;
     }
